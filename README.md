@@ -1,71 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Aplicação CRUD com React
 
-## Available Scripts
+Esta é uma aplicação CRUD (Create, Read, Update, Delete) simples construída usando React. Permite aos usuários gerenciar uma lista de produtos interagindo com uma API RESTful.
 
-In the project directory, you can run:
+## Início Rápido
 
-### `npm start`
+### Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Certifique-se de ter o seguinte instalado:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
 
-### `npm test`
+### Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
 
-### `npm run build`
+   ```bash
+   git clone [URL_do_repositorio]
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navegue até o diretório do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd [diretorio_do_projeto]
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instale as dependências:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Inicie o servidor de desenvolvimento do React:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   A aplicação estará acessível em [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+2. A aplicação consiste em um formulário para adicionar ou editar produtos e uma tabela para exibir a lista de produtos.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Interaja com o formulário para adicionar, editar ou excluir produtos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Recursos
 
-### Code Splitting
+- **Componente Formulario:**
+  - Manipula a entrada do usuário para os detalhes do produto.
+  - Comunica-se com a API RESTful para operações CRUD.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Componente Tabela:**
+  - Exibe uma tabela de produtos.
+  - Permite aos usuários selecionar um produto para edição ou exclusão.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# API-Produto-front
+- **Interação com a API:**
+  - Utiliza a Fetch API para interagir com uma API RESTful.
+  - Pontos de extremidade:
+    - `GET http://localhost:8080/listar`: Recupera a lista de produtos.
+    - `POST http://localhost:8080/cadastrar`: Adiciona um novo produto.
+    - `PUT http://localhost:8080/alterar`: Atualiza um produto existente.
+    - `DELETE http://localhost:8080/remover/:codigo`: Remove um produto pelo código.
